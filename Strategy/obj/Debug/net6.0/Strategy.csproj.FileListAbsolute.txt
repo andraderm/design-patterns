@@ -1,0 +1,15 @@
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\bin\Debug\net6.0\Strategy.exe
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\bin\Debug\net6.0\Strategy.deps.json
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\bin\Debug\net6.0\Strategy.runtimeconfig.json
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\bin\Debug\net6.0\Strategy.dll
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\bin\Debug\net6.0\ref\Strategy.dll
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\bin\Debug\net6.0\Strategy.pdb
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\Strategy.csproj.AssemblyReference.cache
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\Strategy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\Strategy.AssemblyInfoInputs.cache
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\Strategy.AssemblyInfo.cs
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\Strategy.csproj.CoreCompileInputs.cache
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\Strategy.dll
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\ref\Strategy.dll
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\Strategy.pdb
+C:\Users\rmand\OneDrive\Área de Trabalho\Programação\Alura\C#\Strategy\Strategy\obj\Debug\net6.0\Strategy.genruntimeconfig.cache

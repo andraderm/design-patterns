@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Strategy
+namespace Strategy.Investimento
 {
-    public class ICMS : Imposto
+    public interface Investimento
     {
-        public double Calcula(Orcamento orcamento) => orcamento.Valor * 0.05;
+        double Investe(Conta conta);
     }
 }

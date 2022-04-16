@@ -8,10 +8,18 @@ namespace Investimento
 {
     public class Conta
     {
-        public double Valor { get; private set; }
+        public string? Titular { get; set; }
+        public double Valor { get; set; }
 
+        public Conta() {}
         public Conta(double valor)
         {
+            Valor = valor;
+        }
+
+        public Conta(string titular, double valor)
+        {
+            Titular = titular;
             Valor = valor;
         }
 

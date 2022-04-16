@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using DesignPatterns.Descontos;
+using DesignPatterns.ImpressaoConta;
 using Impostos;
 using Investimento;
 
@@ -48,12 +49,26 @@ CalculadorDeDescontos calculadorDeDesconto = new CalculadorDeDescontos();
 
 Orcamento orcamentoDesconto = new Orcamento(500);
 orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Caneta", 10));
-orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Mouse", 180));
-orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Monitor", 1050));
-orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Sulfite", 30));
-orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Teclado", 300));
+orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Lapis", 5));
+//orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Mouse", 180));
+//orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Monitor", 1050));
+//orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Sulfite", 30));
+//orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Teclado", 300));
 // orcamentoDesconto.AdicionaItem(new DesignPatterns.Impostos.Item("Cadeira", 700));
 
 double desconto = calculadorDeDesconto.Calcula(orcamentoDesconto);
 
 Console.WriteLine(desconto);
+
+// Impressao de Conta
+ImpressoraDeContas impressoraDeContas = new ImpressoraDeContas();
+
+Conta c1 = new Conta("Teste", 1000);
+
+Requisicao r1 = new Requisicao(Formato.CSV);
+Requisicao r2 = new Requisicao(Formato.XML);
+Requisicao r3 = new Requisicao(Formato.PORCENTO);
+
+impressoraDeContas.Imprime(c1, r1);
+impressoraDeContas.Imprime(c1, r2);
+impressoraDeContas.Imprime(c1, r3);

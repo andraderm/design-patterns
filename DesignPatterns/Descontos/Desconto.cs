@@ -16,7 +16,7 @@ namespace DesignPatterns.Descontos
         {
             if (orcamento.Items.Count > 5)
             {
-                return orcamento.Valor * 0.1;
+                return orcamento.Items.Sum(x => x.Valor) * 0.1;
             }
 
             return Proximo.Desconta(orcamento);
@@ -31,7 +31,23 @@ namespace DesignPatterns.Descontos
         {
             if (orcamento.Items.Sum(x => x.Valor) > 500)
             {
-                return orcamento.Valor * 0.07;
+                return orcamento.Items.Sum(x => x.Valor) * 0.07;
+            }
+
+            return Proximo.Desconta(orcamento);
+        }
+    }
+
+    public class DescontoPorVendaCasada : IDesconto
+    {
+        public IDesconto Proximo { get; set; }
+
+        public double Desconta(Orcamento orcamento)
+        {
+            bool recebeDesconto = orcamento.Items.Any(x => "CANETA".Equals(x.Nome.ToUpper())) && orcamento.Items.Any(x => "LAPIS".Equals(x.Nome.ToUpper()));
+            if (recebeDesconto)
+            {
+                return orcamento.Items.Sum(x => x.Valor) * 0.05;
             }
 
             return Proximo.Desconta(orcamento);

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rmand\\OneDrive\\Área de Trabalho\\Programação\\Alura\\C#\\Strategy\\Strategy\\DesignPatterns.csproj",
+      "projectUniqueName": "C:\\Users\\rmand\\OneDrive\\Área de Trabalho\\Programação\\Alura\\C#\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj",
       "projectName": "DesignPatterns",
-      "projectPath": "C:\\Users\\rmand\\OneDrive\\Área de Trabalho\\Programação\\Alura\\C#\\Strategy\\Strategy\\DesignPatterns.csproj",
+      "projectPath": "C:\\Users\\rmand\\OneDrive\\Área de Trabalho\\Programação\\Alura\\C#\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj",
       "packagesPath": "C:\\Users\\rmand\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rmand\\OneDrive\\Área de Trabalho\\Programação\\Alura\\C#\\Strategy\\Strategy\\obj\\",
+      "outputPath": "C:\\Users\\rmand\\OneDrive\\Área de Trabalho\\Programação\\Alura\\C#\\DesignPatterns\\DesignPatterns\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

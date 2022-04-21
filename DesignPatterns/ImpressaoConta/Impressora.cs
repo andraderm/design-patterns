@@ -20,6 +20,13 @@ namespace DesignPatterns.ImpressaoConta
 
             return Proximo.Imprime(conta, requisicao);
         }
+
+        public ImpressoraCSV() { }
+
+        public ImpressoraCSV(IImpressora proximo)
+        {
+            Proximo = proximo;
+        }
     }
 
     public class ImpressoraXML : IImpressora
@@ -38,6 +45,13 @@ namespace DesignPatterns.ImpressaoConta
 
             return Proximo.Imprime(conta, requisicao);
         }
+
+        public ImpressoraXML() { }
+
+        public ImpressoraXML(IImpressora proximo)
+        {
+            Proximo = proximo;
+        }
     }
 
     public class ImpressoraPorcento : IImpressora
@@ -53,6 +67,13 @@ namespace DesignPatterns.ImpressaoConta
 
             return Proximo.Imprime(conta, requisicao);
         }
+
+        public ImpressoraPorcento() { }
+
+        public ImpressoraPorcento(IImpressora proximo)
+        {
+            Proximo = proximo;
+        }
     }
 
     public class ImpressoraDefault : IImpressora
@@ -63,5 +84,7 @@ namespace DesignPatterns.ImpressaoConta
         {
             return $"{conta.Titular} - {conta.Valor}";
         }
+
+        public ImpressoraDefault() { }
     }
 }

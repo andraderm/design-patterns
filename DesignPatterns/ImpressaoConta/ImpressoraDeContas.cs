@@ -11,14 +11,10 @@ namespace DesignPatterns.ImpressaoConta
     {
         public void Imprime(Conta conta, Requisicao requisicao)
         {
-            IImpressora i1 = new ImpressoraCSV();
-            IImpressora i2 = new ImpressoraXML();
-            IImpressora i3 = new ImpressoraPorcento();
             IImpressora iFinal = new ImpressoraDefault();
-
-            i1.Proximo = i2;
-            i2.Proximo = i3;
-            i3.Proximo = iFinal;
+            IImpressora i3 = new ImpressoraPorcento(iFinal);
+            IImpressora i2 = new ImpressoraXML(i3);
+            IImpressora i1 = new ImpressoraCSV(i2);
 
             Console.WriteLine(i1.Imprime(conta, requisicao));
         }

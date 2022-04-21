@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using DesignPatterns.Descontos;
+using DesignPatterns.Impostos;
 using DesignPatterns.ImpressaoConta;
 using Impostos;
 using Investimento;
@@ -72,3 +73,39 @@ Requisicao r3 = new Requisicao(Formato.PORCENTO);
 impressoraDeContas.Imprime(c1, r1);
 impressoraDeContas.Imprime(c1, r2);
 impressoraDeContas.Imprime(c1, r3);
+
+// Template
+Console.WriteLine();
+Console.WriteLine("Template: ");
+
+Orcamento orc = new Orcamento(1000);
+orc.AdicionaItem(new Item("Mesa", 280));
+
+Orcamento orc2 = new Orcamento(300);
+
+Orcamento orc3 = new Orcamento(1000);
+orc3.AdicionaItem(new Item("Mesa", 200));
+orc3.AdicionaItem(new Item("Mesa", 300));
+
+Orcamento orc4 = new Orcamento(1000);
+orc4.AdicionaItem(new Item("Cadeira", 200));
+orc4.AdicionaItem(new Item("Mesa", 300));
+
+ICPP icpp = new ICPP();
+IKCV ikcv = new IKCV();
+IHIT ihit = new IHIT();
+
+Console.WriteLine("Orçamento 1 - R$1000 + 1 item");
+Console.WriteLine("ICPP - " + icpp.Calcula(orc));
+Console.WriteLine("ICPP - " + icpp.Calcula(orc2));
+
+Console.WriteLine("Orçamento 2 - R$300");
+Console.WriteLine("IKCV - " + ikcv.Calcula(orc));
+Console.WriteLine("IKCV - " + ikcv.Calcula(orc2));
+
+Console.WriteLine("Orçamento 3 - Itens iguais");
+Console.WriteLine("IHIT - " + ihit.Calcula(orc3));
+
+Console.WriteLine("Orçamento 4 - Itens diferentes");
+Console.WriteLine("IHIT - " + ihit.Calcula(orc4));
+

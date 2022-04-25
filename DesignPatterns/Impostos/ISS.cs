@@ -8,6 +8,9 @@ namespace Impostos
 {
     public class ISS : IImposto
     {
-        public double Calcula(Orcamento orcamento) => orcamento.Valor * 0.06;
+        public ISS() : base() { }
+        public ISS(IImposto outroImposto) : base(outroImposto) { }
+        
+        public override double Calcula(Orcamento orcamento) => orcamento.Valor * 0.06 + CalculaOutroImposto(orcamento);
     }
 }

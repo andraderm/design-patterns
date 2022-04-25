@@ -9,6 +9,9 @@ namespace DesignPatterns.Impostos
 {
     public class IHIT : TemplateImposto
     {
+        public IHIT() : base() { }
+        public IHIT(IImposto outroImposto) : base() { }
+
         public override bool AplicaMaximoImposto(Orcamento orcamento)
         {
             IList<string> noOrcamento = new List<string>();

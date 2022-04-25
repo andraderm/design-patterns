@@ -25,6 +25,7 @@ realizadorDeInvestimento.RealizaInvestimento(conta3, arrojado);
 Console.WriteLine();
 Console.WriteLine("Impostos: ");
 IImposto iss = new ISS();
+IImposto issIcms = new ISS(new ICMS());
 IImposto icsm = new ICMS();
 IImposto iccc = new ICCC();
 
@@ -33,6 +34,7 @@ Orcamento orcamento = new Orcamento(50);
 CalculadorDeImposto calculador = new CalculadorDeImposto();
 
 calculador.RealizaCalculo(orcamento, iss);
+calculador.RealizaCalculo(orcamento, issIcms);
 calculador.RealizaCalculo(orcamento, icsm);
 calculador.RealizaCalculo(orcamento, iccc);
 

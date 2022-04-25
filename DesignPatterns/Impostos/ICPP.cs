@@ -9,6 +9,9 @@ namespace DesignPatterns.Impostos
 {
     public class ICPP : TemplateImposto
     {
+        public ICPP() : base() { }
+        public ICPP(IImposto outroImposto) : base(outroImposto) { }
+
         public override bool AplicaMaximoImposto(Orcamento orcamento)
         {
             return orcamento.Valor >= 500;

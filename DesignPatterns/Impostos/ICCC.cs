@@ -8,7 +8,10 @@ namespace Impostos
 {
     public class ICCC : IImposto
     {
-        public double Calcula(Orcamento orcamento)
+        public ICCC() : base() { }
+        public ICCC(IImposto outroImposto) : base(outroImposto) { }
+
+        public override double Calcula(Orcamento orcamento)
         {
             if (orcamento.Valor < 1000)
             {

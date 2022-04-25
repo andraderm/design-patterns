@@ -9,12 +9,15 @@ namespace DesignPatterns.Impostos
 {
     public abstract class TemplateImposto : IImposto
     {
-        public double Calcula(Orcamento orcamento)
+        public TemplateImposto() : base() { }
+        public TemplateImposto(IImposto outroImposto) : base(outroImposto) { }
+
+        public override double Calcula(Orcamento orcamento)
         {
             if (AplicaMaximoImposto(orcamento))
-                return MaximoValor(orcamento);
+                return MaximoValor(orcamento) + CalculaOutroImposto(orcamento);
 
-            return MinimoValor(orcamento);
+            return MinimoValor(orcamento) + CalculaOutroImposto(orcamento);
         }
 
         public abstract double MaximoValor(Orcamento orcamento);

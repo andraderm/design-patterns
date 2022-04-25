@@ -111,3 +111,18 @@ Console.WriteLine("IHIT - " + ihit.Calcula(orc3));
 Console.WriteLine("Orçamento 4 - Itens diferentes");
 Console.WriteLine("IHIT - " + ihit.Calcula(orc4));
 
+Console.WriteLine();
+Console.WriteLine("Desconto Extra: ");
+Orcamento reforma = new Orcamento(500.0);
+
+reforma.AplicaDescontoExtra();
+Console.WriteLine(reforma.Valor); // imprime 475,00 pois descontou 5%
+reforma.Aprova();
+
+reforma.AplicaDescontoExtra();
+Console.WriteLine(reforma.Valor); // imprime 465,50 pois descontou 2%
+
+reforma.Finaliza();
+
+// reforma.AplicaDescontoExtra(); lança excecao, pois não pode dar desconto nesse estado
+// reforma.Aprova(); lança exceção, pois não pode ir para aprovado

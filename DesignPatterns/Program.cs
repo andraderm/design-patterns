@@ -131,7 +131,10 @@ reforma.Finaliza();
 Console.WriteLine();
 Console.WriteLine("Nota Fiscal: ");
 
-NotaFiscal nf = new NotaFiscalBuilder()
+NotaFiscalBuilder builder = new NotaFiscalBuilder();
+builder.AdicionaAcao(new Multiplicador(5));
+
+NotaFiscal nf = builder
     .ParaEmpresa("Empresa")
     .ComCnpj("123.456.789/0001-12")
     .ComItem(new ItemDaNota(100.0, "Item 1"))
@@ -140,5 +143,3 @@ NotaFiscal nf = new NotaFiscalBuilder()
     .Constroi();
 
 Console.WriteLine(nf.ValorBruto);
-Console.WriteLine(nf.Cnpj);
-Console.WriteLine(nf.DataDeEmissao);

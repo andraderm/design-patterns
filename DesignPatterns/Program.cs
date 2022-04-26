@@ -3,6 +3,7 @@
 using DesignPatterns.Descontos;
 using DesignPatterns.Impostos;
 using DesignPatterns.ImpressaoConta;
+using DesignPatterns.NotasFiscais;
 using Impostos;
 using Investimento;
 
@@ -126,3 +127,18 @@ reforma.Finaliza();
 
 // reforma.AplicaDescontoExtra(); lança excecao, pois não pode dar desconto nesse estado
 // reforma.Aprova(); lança exceção, pois não pode ir para aprovado
+
+Console.WriteLine();
+Console.WriteLine("Nota Fiscal: ");
+
+NotaFiscal nf = new NotaFiscalBuilder()
+    .ParaEmpresa("Empresa")
+    .ComCnpj("123.456.789/0001-12")
+    .ComItem(new ItemDaNota(100.0, "Item 1"))
+    .ComItem(new ItemDaNota(200.0, "Item 2"))
+    .ComObservacoes("Obs")
+    .Constroi();
+
+Console.WriteLine(nf.ValorBruto);
+Console.WriteLine(nf.Cnpj);
+Console.WriteLine(nf.DataDeEmissao);
